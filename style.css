@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal {
+  width: 100%;
+}
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: rgb(233, 217, 217);
+  border-radius: 50px;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgb(255, 212, 102),
+    rgb(255, 161, 102),
+    rgb(218, 123, 255),
+    rgb(143, 102, 255)
+  );
+  width: 50%;
+  border-radius: 50px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  place-content: center;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 40px;
+}
+
+ul li .step {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #d7d7c3;
+  margin: 16px 0 10px;
+  display: grid;
+  place-items: center;
+  color: ghostwhite;
+  position: relative;
+  cursor: pointer;
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 3px;
+  background-color: #d7d7c3;
+  right: 30px;
+}
+
+.first::after {
+  width: 0;
+  height: 0;
+}
+
+ul li .step p {
+  font-size: 18px;
+}
+
+ul li .active {
+  background-color: #1b5676;
+  color: white;
+}
+
+li .active::after {
+  background-color: #1b5676;
+  color: white;
+}
+
+ul li .active p {
+  display: none;
+}
+
+ul li .active .awesome {
+  display: flex;
+}
